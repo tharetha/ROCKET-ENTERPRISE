@@ -1,9 +1,10 @@
 # Stage 1: Build Flutter Web
-FROM debian:latest AS build-env
+FROM debian:bookworm-slim AS build-env
 
 # Install dependencies
-RUN apt-get update && apt-get install -y \
-    curl git wget unzip xz-utils libglu1-mesa \
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl git wget unzip xz-utils libglu1-mesa ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Flutter
