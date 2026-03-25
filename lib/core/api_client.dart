@@ -64,6 +64,22 @@ class ApiClient {
     }
   }
 
+  static Future<Map<String, dynamic>> delete(
+    String endpoint, {
+    bool requireAuth = false,
+  }) async {
+    try {
+      final headers = await _getHeaders(requireAuth: requireAuth);
+      final response = await http
+          .delete(Uri.parse('$baseUrl$endpoint'), headers: headers)
+          .timeout(const Duration(seconds: 10));
+
+      return _decodeResponse(response);
+    } catch (e) {
+      return {'success': false, 'message': 'Network Error: $e'};
+    }
+  }
+
   static Map<String, dynamic> _decodeResponse(http.Response response) {
     if (response.statusCode == 401) {
       debugPrint('[SECURITY-WALL] 401 Unauthorized detected.');

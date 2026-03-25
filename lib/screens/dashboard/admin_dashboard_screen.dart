@@ -10,6 +10,7 @@ import 'account_management_view.dart';
 import 'system_management_view.dart';
 import 'financials_view.dart';
 import 'manager_settings_view.dart';
+import 'profile_settings_view.dart';
 // import 'kyc_review_view.dart'; // Preserve for Control App refactor
 
 class AdminDashboardScreen extends StatefulWidget {
@@ -287,7 +288,7 @@ class _AdminDashboardScreenState extends State<AdminDashboardScreen> {
         case 3: return const AiInsightsView();
         case 4: return const FinancialsView();
         case 5: return const SystemManagementView();
-        case 6: return const AccountManagementView();
+        case 6: return const ProfileSettingsView();
       }
     } else {
       // Level 2 (Manager)
@@ -296,7 +297,7 @@ class _AdminDashboardScreenState extends State<AdminDashboardScreen> {
         case 2: return const AiInsightsView();
         case 3: return const FinancialsView();
         case 4: return const SystemManagementView();
-        case 5: return const ManagerSettingsView();
+        case 5: return const ProfileSettingsView();
       }
     }
 

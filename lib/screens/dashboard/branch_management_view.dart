@@ -118,7 +118,10 @@ class _BranchManagementViewState extends State<BranchManagementView> {
                  }
               }
             },
-            child: const Text('Create Branch'),
+            child: const Text(
+              'Create Branch',
+              style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            ),
           ),
         ],
       ),
@@ -144,7 +147,10 @@ class _BranchManagementViewState extends State<BranchManagementView> {
               ElevatedButton.icon(
                 onPressed: _showAddBranchDialog,
                 icon: const Icon(Icons.add),
-                label: const Text('Add Branch'),
+                label: const Text(
+                  'Add Branch',
+                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                ),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blueAccent,
                   padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
@@ -173,18 +179,66 @@ class _BranchManagementViewState extends State<BranchManagementView> {
                     ),
                     title: Text(branch['name'], style: const TextStyle(fontWeight: FontWeight.bold)),
                     subtitle: Text(branch['location'] ?? 'No location set'),
-                    trailing: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.end,
+                    trailing: Row(
+                      mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text('Manager: ${branch['manager']}', style: const TextStyle(color: Colors.white70)),
-                        const Text('Active', style: TextStyle(color: Colors.greenAccent, fontSize: 12)),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Text('Manager: ${branch['manager']}', style: const TextStyle(color: Colors.white70)),
+                            const Text('Active', style: TextStyle(color: Colors.greenAccent, fontSize: 12)),
+                          ],
+                        ),
+                        const SizedBox(width: 8),
+                        IconButton(
+                          icon: const Icon(Icons.delete_outline, color: Colors.redAccent),
+                          onPressed: () => _confirmDeleteBranch(branch),
+                        ),
                       ],
                     ),
                   );
                 },
               ),
             ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _confirmDeleteBranch(dynamic branch) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        backgroundColor: const Color(0xFF1E293B),
+        title: const Text('Delete Branch', style: TextStyle(color: Colors.white)),
+        content: Text(
+          'Are you sure you want to delete "${branch['name']}"? This will also unassign the manager.',
+          style: const TextStyle(color: Colors.white70),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Cancel', style: TextStyle(color: Colors.white38)),
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(backgroundColor: Colors.redAccent),
+            onPressed: () async {
+              final res = await ApiClient.delete('/merchant/branch/${branch['id']}', requireAuth: true);
+              if (mounted) Navigator.pop(context);
+              
+              if (res['success'] == true) {
+                _fetchBranches();
+              } else {
+                if (mounted) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text(res['message'] ?? 'Error deleting branch')),
+                  );
+                }
+              }
+            },
+            child: const Text('Delete', style: TextStyle(color: Colors.white)),
           ),
         ],
       ),
