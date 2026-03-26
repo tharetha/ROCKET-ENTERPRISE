@@ -35,13 +35,21 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
       final user = data['user'];
 
       // ── Access Validation ──────────────────────────────────────────────────
+      final bool isAuthorized = user['is_enterprise_authorized'] == true;
       final int level = int.tryParse(user['merchant_level']?.toString() ?? '0') ?? 0;
       final String category = user['category']?.toString() ?? 'USER';
+      final String profileId = user['merchant_profile_id']?.toString() ?? '';
+      final String branchId = user['managed_branch_id']?.toString() ?? '';
       
-      debugPrint('[AUTH] Login Attempt: Category=$category, Level=$level');
+      debugPrint('[AUTH] Login Attempt: Category=$category, Level=$level, Auth=$isAuthorized');
 
-      // Allow access if level >= 1 (HQ=1, Branch=2) OR if explicitly MERCHANT_ADMIN
-      if (level < 1 && category != 'MERCHANT_ADMIN') {
+      // Permanent Resilient Logic:
+      // 1. Check if backend explicitly authorized enterprise access
+      // 2. Fallback: Check if user has merchant level >= 1
+      // 3. Fallback: Check if user is linked to a profile or branch
+      bool hasAccess = isAuthorized || (level >= 1) || (profileId.isNotEmpty || branchId.isNotEmpty);
+
+      if (!hasAccess) {
         setState(() {
           _errorMessage =
               'Access Denied: You do not have Enterprise Portal privileges. (Role: $category, Lvl: $level)';
