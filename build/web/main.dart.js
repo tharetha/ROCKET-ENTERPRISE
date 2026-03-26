@@ -96200,7 +96200,7 @@ break
 case 6:p.a3(new A.arq(p,o))
 case 5:case 1:return A.N(q,r)}})
 return A.O($async$iy,r)},
-L(a){var s,r,q,p=this,o=null,n=A.bq(16),m=B.d.aC(127.5),l=A.b([new A.by(0,B.P,A.ak(m,B.l.A()>>>16&255,B.l.A()>>>8&255,B.l.A()&255),B.m_,30)],t.E),k=t.p,j=A.b([B.L2,B.bB,B.a5N,B.eH,B.a5k,B.d1],k)
+L(a){var s,r,q,p=this,o=null,n=A.bq(16),m=B.d.aC(127.5),l=A.b([new A.by(0,B.P,A.ak(m,B.l.A()>>>16&255,B.l.A()>>>8&255,B.l.A()&255),B.m_,30)],t.E),k=t.p,j=A.b([B.L2,B.bB,B.a5N,B.eH,B.a5a,B.d1],k)
 if(p.r!=null){m=A.ak(m,B.ff.A()>>>16&255,B.ff.A()>>>8&255,B.ff.A()&255)
 s=A.bq(8)
 r=A.e5(B.kn,1)
@@ -96297,7 +96297,7 @@ return A.O($async$kK,r)},
 P3(a,b,c,d){var s=null,r=A.qW(b,B.bz,s,s),q=A.bq(12)
 return new A.bH(B.ph,A.j2(a,A.r0(s,s,s,s,s,s,s,new A.dE(4,A.bq(12),B.f0),!0,new A.dE(4,q,B.f0),s,s,s,s,s,B.bF,!0,s,s,s,s,new A.dE(4,A.bq(12),B.hq),s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,B.h9,d,!0,!0,!1,s,r,s,s,s,s,s,s,s,s,s,s,s,s),!0,c,s,B.cl),s)},
 xT(a,b,c){return this.P3(a,b,!1,c)},
-L(a){var s,r,q,p,o,n,m,l,k,j=this,i=null,h=A.bq(16),g=A.b([new A.by(0,B.P,B.l.eC(0.5),B.m_,30)],t.E),f=t.p,e=A.b([B.KX,B.BD,B.a5f,B.mL,B.a5h,B.ZY],f)
+L(a){var s,r,q,p,o,n,m,l,k,j=this,i=null,h=A.bq(16),g=A.b([new A.by(0,B.P,B.l.eC(0.5),B.m_,30)],t.E),f=t.p,e=A.b([B.KX,B.BD,B.a5g,B.mL,B.a5i,B.ZY],f)
 if(j.at!=null){s=B.ff.eC(0.5)
 r=A.bq(8)
 q=A.e5(B.kn,1)
@@ -96669,7 +96669,7 @@ $0(){return this.a.aa7(this.b)},
 $S:0}
 A.asu.prototype={
 $1(a){var s=null,r=this.b,q=A.b9('Are you sure you want to delete "'+A.j(J.an(r,"name"))+'"? This will also unassign the manager.',s,s,s,B.mW,s,s)
-return A.a5u(A.b([A.tt(B.a6j,new A.ass(a),s),A.nP(B.a5R,new A.ast(this.a,r,a),A.nQ(s,s,B.eq,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s))],t.p),B.ao,q,B.a5e)},
+return A.a5u(A.b([A.tt(B.a6j,new A.ass(a),s),A.nP(B.a5R,new A.ast(this.a,r,a),A.nQ(s,s,B.eq,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s))],t.p),B.ao,q,B.a5f)},
 $S:84}
 A.ass.prototype={
 $0(){A.er(this.a,!1).lg(0,null)
@@ -96808,7 +96808,7 @@ A.a4Q(!0,new A.axy(this,r+s,b,a),q,t.z)},
 L(a){var s,r,q,p,o,n=this,m=null
 if(n.f)return B.e2
 s=t.p
-r=A.b([B.a5a],s)
+r=A.b([B.a5b],s)
 q=n.r
 if(q===2)r.push(A.a9M(B.lq,B.a5_,n.galy(),A.nQ(m,m,B.z,m,m,m,m,m,m,m,m,m,B.kG,m,m,m,m,m,m,m)))
 else if(q===1)r.push(B.JE)
@@ -96834,7 +96834,7 @@ A.axv.prototype={
 $0(){return this.a.f=!1},
 $S:0}
 A.axB.prototype={
-$1(a){var s=null,r=this.b,q=t.p,p=A.cg(A.b([B.a5i,B.b3,A.j2(r,B.Lf,s,!1,s,s)],q),B.C,B.p,B.aE)
+$1(a){var s=null,r=this.b,q=t.p,p=A.cg(A.b([B.a5j,B.b3,A.j2(r,B.Lf,s,!1,s,s)],q),B.C,B.p,B.aE)
 return A.a5u(A.b([A.tt(B.Ca,new A.axz(a),s),A.nP(B.a51,new A.axA(this.a,r,a),s)],q),B.ao,p,B.a5V)},
 $S:84}
 A.axz.prototype={
@@ -96931,7 +96931,7 @@ if(J.d(J.an(o,"success"),!0))p.a3(new A.ayh(p))
 else p.a3(new A.ayi(p,o))
 case 1:return A.N(q,r)}})
 return A.O($async$ys,r)},
-L(a){var s,r,q,p,o,n=this,m=null,l=A.bq(12),k=A.e5(B.df,1),j=t.p,i=A.b([B.a5c,B.bB],j)
+L(a){var s,r,q,p,o,n=this,m=null,l=A.bq(12),k=A.e5(B.df,1),j=t.p,i=A.b([B.a5d,B.bB],j)
 if(n.w!=null){s=n.x?A.ak(B.d.aC(25.5),B.lS.A()>>>16&255,B.lS.A()>>>8&255,B.lS.A()&255):A.ak(B.d.aC(25.5),B.iA.A()>>>16&255,B.iA.A()>>>8&255,B.iA.A()&255)
 r=A.bq(8)
 q=n.x
@@ -97046,7 +97046,7 @@ o=A.b([A.ak(o,B.fL.A()>>>16&255,B.fL.A()>>>8&255,B.fL.A()&255),A.ak(o,B.z.A()>>>
 s=A.bq(16)
 r=A.e5(A.ak(B.d.aC(76.5),B.z.A()>>>16&255,B.z.A()>>>8&255,B.z.A()&255),1)
 q=t.p
-return A.bD(p,A.cg(A.b([A.cP(A.b([B.KH,B.c5,B.a5C,B.h5,A.aNl(B.dA,p,p,p,!1,B.ap,p,p,p,p,p,p,new A.aB8(this),p,p,p,p,p,p,p,p,this.f)],q),B.C,B.p,B.x,0,p),B.dI,B.a5D,B.b3,B.a5b,B.a5r,B.a6w],q),B.a5,B.p,B.x),B.n,p,p,new A.bx(p,p,r,s,p,new A.vS(B.eY,B.hk,B.dL,o,p,p),B.E),p,p,p,p,B.dj,p,p,p)}}
+return A.bD(p,A.cg(A.b([A.cP(A.b([B.KH,B.c5,B.a5C,B.h5,A.aNl(B.dA,p,p,p,!1,B.ap,p,p,p,p,p,p,new A.aB8(this),p,p,p,p,p,p,p,p,this.f)],q),B.C,B.p,B.x,0,p),B.dI,B.a5D,B.b3,B.a5c,B.a5r,B.a6w],q),B.a5,B.p,B.x),B.n,p,p,new A.bx(p,p,r,s,p,new A.vS(B.eY,B.hk,B.dL,o,p,p),B.E),p,p,p,p,B.dj,p,p,p)}}
 A.aBf.prototype={
 $0(){var s=this.a
 s.z=!0
@@ -103716,8 +103716,8 @@ B.dA=new A.me(B.Ud,1,1,0.6705882352941176,0.25098039215686274,B.e)
 B.JG=new A.OB(1,"italic")
 B.a2V=new A.n(!0,B.dA,null,null,null,null,null,null,B.JG,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.bS=new A.mP(1,"right")
-B.a5g=new A.ap("Node creation is managed by Branch Managers.",null,B.a2V,B.bS,null,null,null,null,null)
-B.JE=new A.kp(1,B.el,B.a5g,null)
+B.a5h=new A.ap("Node creation is managed by Branch Managers.",null,B.a2V,B.bS,null,null,null,null,null)
+B.JE=new A.kp(1,B.el,B.a5h,null)
 B.JF=new A.Bv(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.pM=new A.Bw(0,"Start")
 B.i6=new A.Bw(1,"Update")
@@ -105434,8 +105434,8 @@ B.Km=new A.bF(61195,"MaterialIcons",!1)
 B.KS=new A.c5(B.Km,null,null,null,null)
 B.JX=new A.bF(57627,"MaterialIcons",!1)
 B.KG=new A.c5(B.JX,null,null,null,null)
-B.a5j=new A.ap("Branches",null,null,null,null,null,null,null,null)
-B.V0=new A.kF(B.KS,B.KG,B.a5j)
+B.a5k=new A.ap("Branches",null,null,null,null,null,null,null,null)
+B.V0=new A.kF(B.KS,B.KG,B.a5k)
 B.Kk=new A.bF(60979,"MaterialIcons",!1)
 B.L4=new A.c5(B.Kk,null,null,null,null)
 B.KK=new A.c5(B.pX,null,null,null,null)
@@ -105622,8 +105622,8 @@ B.a5s=new A.ap("Profile Encryption Key",null,B.mY,null,null,null,null,null,null)
 B.Qw=s([B.KP,B.c5,B.a5s],t.p)
 B.XJ=new A.oK(B.af,B.p,B.x,B.C,null,B.bi,null,0,B.Qw,null)
 B.KO=new A.c5(B.pW,null,B.z,null,null)
-B.a5d=new A.ap("Linked Bank Accounts",null,B.mY,null,null,null,null,null,null)
-B.Os=s([B.KO,B.c5,B.a5d],t.p)
+B.a5e=new A.ap("Linked Bank Accounts",null,B.mY,null,null,null,null,null,null)
+B.Os=s([B.KO,B.c5,B.a5e],t.p)
 B.XK=new A.oK(B.af,B.p,B.x,B.C,null,B.bi,null,0,B.Os,null)
 B.jg=new A.n(!0,B.e6,null,null,null,null,12,B.W,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.a5W=new A.ap("Reference",null,B.jg,null,null,null,null,null,null)
@@ -106328,19 +106328,19 @@ B.a54=new A.ap("OFFICIAL",null,B.a4p,null,null,null,null,null,null)
 B.a1P=new A.n(!0,B.j,null,null,null,null,24,B.W,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.a57=new A.ap("Security Settings",null,B.a1P,null,null,null,null,null,null)
 B.a58=new A.ap("Don't have an Enterprise account?",null,B.mW,null,null,null,null,null,null)
-B.jh=new A.n(!0,null,null,null,null,null,20,B.W,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a5a=new A.ap("Active Till Nodes",null,B.jh,null,null,null,null,null,null)
-B.n_=new A.n(!0,B.R,null,null,null,null,12,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a5b=new A.ap("\u2022 Target local customers",null,B.n_,null,null,null,null,null,null)
-B.a5c=new A.ap("Change Password",null,B.d2,null,null,null,null,null,null)
-B.a5e=new A.ap("Delete Branch",null,B.cl,null,null,null,null,null,null)
-B.a3c=new A.n(!0,B.j,null,null,null,null,26,B.W,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a5f=new A.ap("Register Your Enterprise",null,B.a3c,B.bT,null,null,null,null,null)
-B.a4x=new A.n(!0,B.kd,null,null,null,null,14,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a5h=new A.ap("Create a Level 1 HQ Account",null,B.a4x,B.bT,null,null,null,null,null)
-B.a5i=new A.ap("Assign a tag to this terminal (e.g. Till 1, Counter A)",null,null,null,null,null,null,null,null)
 B.a0d=new A.n(!0,B.R,null,null,null,null,16,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a5k=new A.ap("Management Portal",null,B.a0d,B.bT,null,null,null,null,null)
+B.a5a=new A.ap("Management Portal v3.0.1 ALPHA",null,B.a0d,B.bT,null,null,null,null,null)
+B.jh=new A.n(!0,null,null,null,null,null,20,B.W,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.a5b=new A.ap("Active Till Nodes",null,B.jh,null,null,null,null,null,null)
+B.n_=new A.n(!0,B.R,null,null,null,null,12,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.a5c=new A.ap("\u2022 Target local customers",null,B.n_,null,null,null,null,null,null)
+B.a5d=new A.ap("Change Password",null,B.d2,null,null,null,null,null,null)
+B.a5f=new A.ap("Delete Branch",null,B.cl,null,null,null,null,null,null)
+B.a3c=new A.n(!0,B.j,null,null,null,null,26,B.W,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.a5g=new A.ap("Register Your Enterprise",null,B.a3c,B.bT,null,null,null,null,null)
+B.a4x=new A.n(!0,B.kd,null,null,null,null,14,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.a5i=new A.ap("Create a Level 1 HQ Account",null,B.a4x,B.bT,null,null,null,null,null)
+B.a5j=new A.ap("Assign a tag to this terminal (e.g. Till 1, Counter A)",null,null,null,null,null,null,null,null)
 B.mZ=new A.n(!0,B.j,null,null,null,null,null,B.W,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.a5l=new A.ap("Add Branch",null,B.mZ,null,null,null,null,null,null)
 B.a5n=new A.ap("Download / Print QR",null,null,null,null,null,null,null,null)

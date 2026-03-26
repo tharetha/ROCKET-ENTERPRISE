@@ -34,12 +34,17 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
       final data = res['data'];
       final user = data['user'];
 
-      // Strict Security: Only MERCHANT_ADMIN or HIGH level users can access the portal
-      if (user['category'] != 'MERCHANT_ADMIN' ||
-          (user['merchant_level'] ?? 0) < 1) {
+      // ── Access Validation ──────────────────────────────────────────────────
+      final int level = int.tryParse(user['merchant_level']?.toString() ?? '0') ?? 0;
+      final String category = user['category']?.toString() ?? 'USER';
+      
+      debugPrint('[AUTH] Login Attempt: Category=$category, Level=$level');
+
+      // Allow access if level >= 1 (HQ=1, Branch=2) OR if explicitly MERCHANT_ADMIN
+      if (level < 1 && category != 'MERCHANT_ADMIN') {
         setState(() {
           _errorMessage =
-              'Access Denied: You do not have Enterprise Portal privileges.';
+              'Access Denied: You do not have Enterprise Portal privileges. (Role: $category, Lvl: $level)';
         });
         return;
       }
@@ -106,7 +111,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
                 ),
                 const SizedBox(height: 8),
                 const Text(
-                  'Management Portal',
+                  'Management Portal v3.0.1 ALPHA',
                   textAlign: TextAlign.center,
                   style: TextStyle(color: Colors.white70, fontSize: 16),
                 ),
